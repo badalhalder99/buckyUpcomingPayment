@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MY Bucky</title>
+    <!-- font-awesome cdn call -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- bootstrap5.0.0 cdn call -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+    />
+    <!-- owl carousel and owl-theme css  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <!-- app css -->
+    <link rel="stylesheet" href="./css/app.css" />
+  </head>
+  <body>
+    <!-- Tablet and Mobile header start -->
+    <header class="headerWrap">
+      <div class="barIconWrap">
+        <button id="menuButton">
+          <img src="./img/menu.png" alt="" class="img-fluid" />
+        </button>
+      </div>
+      <div class="headerLogoWrap">
+        <img src="./img/homeLogo.png" alt="logo" class="img-fluid" />
+      </div>
+      <div class="headerProfileWrap">
+        <button
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#profileDropdown"
+        >
+          AH
+        </button>
+      </div>
+    </header>
+    <div class="buckyDashboardMenu mobileMenu" id="mobileMenu">
+      <ul>
+        <li class="active">
+          <a href="#"
+            ><i class="fa-solid fa-house"></i><span>My Buckyy</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-solid fa-calendar-days"></i>
+            <span>Upcoming payments</span>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            ><i class="fa-brands fa-first-order-alt"></i><span>Orders</span>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            ><i class="fa-solid fa-comment-dollar"></i>
+            <span>Recurring payments</span>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            ><i class="fa-solid fa-message"></i><span>Help center</span>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            ><i class="fa-regular fa-circle-user"></i><span>Account</span>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            ><i class="fa-solid fa-bag-shopping"></i><span>Shop</span>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            ><i class="fa-solid fa-bag-shopping"></i><span>Log out</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- Tablet and Mobile header start -->
+    <!-- Bucky section start -->
+    <section class="buckyWrap">
+      <!-- container-fluid -->
+      <div class="container-fluid">
+        <!-- row -->
+        <div class="row">
+          <!-- col-md-3 -->
+          <div class="col-md-3">
+            <div class="buckyLeftWrap">
+              <div class="buckyTop">
+                <img src="./img/homeLogo.png" alt="" class="img-fluid" />
+                <h2>Buckyy</h2>
+              </div>
+              <div class="buckyDashboardMenu">
+                <ul>
+                  <li class="active">
+                    <a href="#"
+                      ><i class="fa-solid fa-house"></i><span>My Buckyy</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa-solid fa-calendar-days"></i>
+                      <span>Upcoming payments</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa-brands fa-first-order-alt"></i
+                      ><span>Orders</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa-solid fa-comment-dollar"></i>
+                      <span>Recurring payments</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa-solid fa-message"></i
+                      ><span>Help center</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa-regular fa-circle-user"></i
+                      ><span>Account</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa-solid fa-bag-shopping"></i><span>Shop</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="userLogout">
+                <a href="#">
+                  <i class="fa-solid fa-right-from-bracket"></i
+                  ><span>Log Out</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- col-md-9 -->
+          <div class="col-md-9">
+            <div class="buckyRightWrap">
+              <!-- bukcy buckyTopRight section start-->
+              <div class="buckyTopRight">
+                <div class="profileWrap">
+                  <div class="profileName">
+                    <span>AH</span>
+                  </div>
+                  <div class="profileInfo">
+                    <span> Pay in 4 available to spend </span>
+                    <!-- Button trigger modal -->
+                    <!-- data-bs-toggle="modal" data-bs-target="#exampleModal" -->
+                    <button
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                    >
+                      <i class="fa-solid fa-circle-exclamation"></i>
+                    </button>
+                    <h5>$1000.00</h5>
+                  </div>
+                  <div class="profileDetails">
+                    <!-- Button trigger modal -->
+                    <!-- data-bs-toggle="modal" data-bs-target="#profileDropdown" -->
+                    <button
+                      data-bs-toggle="modal"
+                      data-bs-target="#profileDropdown"
+                    >
+                      <i class="fa-solid fa-angle-down"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- bukcy purchase section start-->
+              <div class="purchaseWrap">
+                <h2>Hey Asif, you can make your first purchase!</h2>
+                <h1>$1,000.00</h1>
+                <p>Total owing</p>
+              </div>
+              <!-- shop process section start-->
+              <div class="shopProcessWrap">
+                <div class="step step1">
+                  <div class="stepOneLeft">
+                    <span><i class="fa-solid fa-check"></i></span>
+                  </div>
+                  <div class="stepOneRight">
+                    <h5>Account created</h5>
+                    <p>You've verified your email and mobile</p>
+                  </div>
+                </div>
+                <div class="step step2">
+                  <div class="stepTwoLeft">
+                    <span>2</span>
+                  </div>
+                  <div class="stepTwoMiddle">
+                    <h5>Add payment method</h5>
+                    <p>Use a debit or credit card</p>
+                  </div>
+                  <div class="stepTwoRight">
+                    <button
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#addPayment"
+                    >
+                      Add now
+                    </button>
+                  </div>
+                </div>
+                <div class="step step3">
+                  <div class="stepThreeLeft">
+                    <span>3</span>
+                  </div>
+                  <div class="stepTwoMiddle">
+                    <h5>Buckyy it!</h5>
+                    <p>Shop online or in-store</p>
+                  </div>
+                  <div class="stepTwoRight">
+                    <button type="button">Shop now</button>
+                  </div>
+                </div>
+              </div>
+              <!-- bukcy app section start-->
+              <div class="buckyAppWrap">
+                <div class="appInfo">
+                  <h2>Buckyy it with the App!</h2>
+                  <p>
+                    Stay up to date on new retailer launches and manage existing
+                    orders with our easy-to-use app.
+                  </p>
+                  <a href="#">Download the app for free</a>
+                </div>
+                <div class="appImg">
+                  <img
+                    src="./img/bukcyAppImg.JPG"
+                    alt="bucky app img"
+                    class="img-fluid"
+                  />
+                </div>
+              </div>
+              <!-- payment section start-->
+              <div class="buckyAppWrap">
+                <div class="appInfo">
+                  <h2 class="paymentHeading">Monthly payments are here!</h2>
+                  <p class="paymentInfo">
+                    Introducing the new way to shop with Buckyy, offering more
+                    flexibility with your payments..
+                  </p>
+                  <p>
+                    Rates are between 6.85%–35.99% APR. Actual rate based on
+                    creditworthiness. A down payment may be required. Subject to
+                    eligibility check and approval. See
+                    <a href="#">"Terms"</a> for details. Loans issued by First
+                    Electronic Bank, Member FDIC.
+                  </p>
+                  <a href="#" class="learnMore">Learn more</a>
+                </div>
+                <div class="appImg paymentImg">
+                  <img
+                    src="./img/treat-yourself.svg"
+                    alt="bucky app img"
+                    class="img-fluid"
+                  />
+                </div>
+              </div>
+              <!-- dashboard slider-1 start-->
+              <div class="sliderWrapper">
+                <div class="sliderTopWrap">
+                  <h2>New</h2>
+                  <button>See more</button>
+                </div>
+                <div class="owl-carousel owl-theme">
+                  <div class="item">
+                    <a href="#">
+                      <img
+                        src="./img/fashion.jpg"
+                        alt="smartphone"
+                        class="img-fluid d-block"
+                      />
+                    </a>
+                    <h4>Smartphones</h4>
+                  </div>
+                  <div class="item">
+                    <a href="#">
+                      <img
+                        src="./img/fashion.jpg"
+                        alt=""
+                        class="img-fluid d-block"
+                      />
+                    </a>
+                    <h4>Gadgets</h4>
+                  </div>
+                  <div class="item">
+                    <a href="#">
+                      <img
+                        src="./img/fashion.jpg"
+                        alt=""
+                        class="img-fluid d-block"
+                      />
+                    </a>
+                    <h4>Fashion</h4>
+                  </div>
+                  <div class="item">
+                    <a href="#">
+                      <img
+                        src="./img/fashion.jpg"
+                        alt=""
+                        class="img-fluid d-block"
+                      />
+                    </a>
+                    <h4>Smartphones</h4>
+                  </div>
+                  <div class="item">
+                    <a href="#">
+                      <img
+                        src="./img/fashion.jpg"
+                        alt=""
+                        class="img-fluid d-block"
+                      />
+                    </a>
+                    <h4>Gadgets</h4>
+                  </div>
+                  <div class="item">
+                    <a href="#">
+                      <img
+                        src="./img/fashion.jpg"
+                        alt=""
+                        class="img-fluid d-block"
+                      />
+                    </a>
+                    <h4>Fashion</h4>
+                  </div>
+                  <div class="item">
+                    <a href="#">
+                      <img
+                        src="./img/fashion.jpg"
+                        alt=""
+                        class="img-fluid d-block"
+                      />
+                    </a>
+                    <h4>Gadgets</h4>
+                  </div>
+                  <div class="item">
+                    <a href="#">
+                      <img
+                        src="./img/fashion.jpg"
+                        alt=""
+                        class="img-fluid d-block"
+                      />
+                    </a>
+                    <h4>Smartphones</h4>
+                  </div>
+                  <div class="item">
+                    <a href="#">
+                      <img
+                        src="./img/fashion.jpg"
+                        alt=""
+                        class="img-fluid d-block"
+                      />
+                    </a>
+                    <h4>Fashion</h4>
+                  </div>
+                  <div class="item">
+                    <a href="#">
+                      <img
+                        src="./img/fashion.jpg"
+                        alt=""
+                        class="img-fluid d-block"
+                      />
+                    </a>
+                    <h4>Gadgets</h4>
+                  </div>
+                  <div class="item">
+                    <a href="#">
+                      <img
+                        src="./img/fashion.jpg"
+                        alt=""
+                        class="img-fluid d-block"
+                      />
+                    </a>
+                    <h4>Smartphones</h4>
+                  </div>
+                  <div class="item">
+                    <a href="#">
+                      <img
+                        src="./img/fashion.jpg"
+                        alt=""
+                        class="img-fluid d-block"
+                      />
+                    </a>
+                    <h4>Fashion</h4>
+                  </div>
+                </div>
+              </div>
+              <!-- dashboard slider-1 end-->
+              <!-- dashboard slider-2 start-->
+              <div class="sliderWrapper">
+                <div class="sliderTopWrap">
+                  <h2>Trending now</h2>
+                  <button>See more</button>
+                </div>
+                <div class="owl-carousel owl-theme">
+                  <div class="item">
+                    <a href="#">
+                      <img
+                        src="./img/shoee.jpg"
+                        alt="smartphone"
+                        class="img-fluid d-block"
+                      />
+                    </a>
+                    <h4>Smartphones</h4>
+                  </div>
+                  <div class="item">
+                    <a href="#">
+                      <img
+                        src="./img/shoee.jpg"
+                        alt=""
+                        class="img-fluid d-block"
+                      />
+                    </a>
+                    <h4>Gadgets</h4>
+                  </div>
+                  <div class="item">
+                    <a href="#">
+                      <img
+                        src="./img/shoee.jpg"
+                        alt=""
+                        class="img-fluid d-block"
+                      />
+                    </a>
+                    <h4>Fashion</h4>
+                  </div>
+                  <div class="item">
+                    <a href="#">
+                      <img
+                        src="./img/shoee.jpg"
+                        alt=""
+                        class="img-fluid d-block"
+                      />
+                    </a>
+                    <h4>Smartphones</h4>
+                  </div>
+                  <div class="item">
+                    <a href="#">
+                      <img
+                        src="./img/shoee.jpg"
+                        alt=""
+                        class="img-fluid d-block"
+                      />
+                    </a>
+                    <h4>Gadgets</h4>
+                  </div>
+                  <div class="item">
+                    <a href="#">
+                      <img
+                        src="./img/shoee.jpg"
+                        alt=""
+                        class="img-fluid d-block"
+                      />
+                    </a>
+                    <h4>Fashion</h4>
+                  </div>
+                  <div class="item">
+                    <a href="#">
+                      <img
+                        src="./img/shoee.jpg"
+                        alt=""
+                        class="img-fluid d-block"
+                      />
+                    </a>
+                    <h4>Gadgets</h4>
+                  </div>
+                  <div class="item">
+                    <a href="#">
+                      <img
+                        src="./img/shoee.jpg"
+                        alt=""
+                        class="img-fluid d-block"
+                      />
+                    </a>
+                    <h4>Smartphones</h4>
+                  </div>
+                  <div class="item">
+                    <a href="#">
+                      <img
+                        src="./img/shoee.jpg"
+                        alt=""
+                        class="img-fluid d-block"
+                      />
+                    </a>
+                    <h4>Fashion</h4>
+                  </div>
+                  <div class="item">
+                    <a href="#">
+                      <img
+                        src="./img/shoee.jpg"
+                        alt=""
+                        class="img-fluid d-block"
+                      />
+                    </a>
+                    <h4>Gadgets</h4>
+                  </div>
+                  <div class="item">
+                    <a href="#">
+                      <img
+                        src="./img/shoee.jpg"
+                        alt=""
+                        class="img-fluid d-block"
+                      />
+                    </a>
+                    <h4>Smartphones</h4>
+                  </div>
+                  <div class="item">
+                    <a href="#">
+                      <img
+                        src="./img/shoee.jpg"
+                        alt=""
+                        class="img-fluid d-block"
+                      />
+                    </a>
+                    <h4>Fashion</h4>
+                  </div>
+                </div>
+              </div>
+              <!-- dashboard slider-2 end-->
+              <!-- footer start -->
+              <footer>
+                <div class="footerWrap">
+                  <p>© 2023 Buckyy</p>
+                  <a href="#" class="terms">Terms</a>
+                  <a href="#">Privacy Policy</a>
+                </div>
+              </footer>
+              <!-- footer end -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Bucky section end -->
+
+    <!-- bucky modal 1 code start -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content modalContent">
+          <div class="modal-header modalHeader">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Pay in 4 available to spend
+            </h5>
+            <button
+              type="button"
+              class="closeButton"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <div class="modal-body modalBody">
+            <p>
+              This is the estimated amount you can spend using Pay in 4 on your
+              account.
+            </p>
+            <p>
+              This amount is not guaranteed and may change based on variety of
+              factors as described in our help centre. In addition to your
+              individual spending limit, there may be additional limitations
+              based on the merchant where you are shopping.
+            </p>
+            <h6>How is this amount determined?</h6>
+            <p>
+              We take a few factors into consideration when determining your Pay
+              in 4 available to spend amount:
+            </p>
+            <ul>
+              <li><span>Your history of making payments on time</span></li>
+              <li><span>How long you’ve been using Bucky</span></li>
+            </ul>
+            <p>
+              To read more detail about how this works, refer to our
+              <a href="#">help article</a>.
+            </p>
+            <button>Got it!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- bucky modal 1 code end-->
+
+    <!-- bucky modal 2 code start-->
+    <div
+      class="modal fade"
+      id="profileDropdown"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modalPositionRight modalSmall">
+        <div class="modal-content modalContent">
+          <div class="modal-body moddalBody">
+            <div class="idName">
+              <span>AH</span>
+            </div>
+            <div class="userProfileInformation">
+              <h5>Asif Hussain</h5>
+              <p>mivida01985@gmail.com</p>
+            </div>
+            <div class="dropDownListWrap">
+              <ul>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Pulse Rewards</a></li>
+                <li><a href="#">Payment methods</a></li>
+                <li><a href="#">Preferences</a></li>
+                <li><a href="#">Security</a></li>
+                <li><a href="#">Log out</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- bucky modal 2 code end-->
+
+    <!-- bucky modal 3(payment method add modal) code start-->
+    <div
+      class="modal fade"
+      id="addPayment"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content modalContent">
+          <div class="modal-header modalHeader">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Add payment method
+            </h5>
+            <button
+              type="button"
+              class="closeButton"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <div class="modal-body modalBody">
+            <div class="paymentFromHeaderWrap">
+              <div class="paymentHeading">
+                <h4>Credit or Debit Card</h4>
+              </div>
+              <div class="paymentMethodImg">
+                <img src="./img/visaCard.JPG" alt="" class="img-fluid" />
+              </div>
+            </div>
+            <form id="payment-form">
+              <div class="paymentInputWrap">
+                <div class="formGroup">
+                  <label for="name">Card Holder Name</label>
+                  <input
+                    type="text"
+                    class="name"
+                    name="name"
+                    value="Asif Hossain"
+                    required
+                  />
+                </div>
+                <div class="formGroup">
+                  <input
+                    type="text"
+                    id="card-number"
+                    placeholder="Card Number"
+                    name="card-number"
+                    required
+                  />
+                </div>
+                <div class="formGroup">
+                  <input
+                    type="date"
+                    placeholder="MM/YY"
+                    id="expiration-date"
+                    name="expiration-date"
+                    required
+                  />
+                </div>
+                <div class="formGroup">
+                  <input
+                    type="number"
+                    class="cvv"
+                    name="cvv"
+                    placeholder="CVV"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="formGroup paymentCheckbox">
+                <input
+                  type="checkbox"
+                  id="save-card-info"
+                  name="save-card-info"
+                />
+                <label for="save-card-info" class="saveCardInfo"
+                  >Billing address same as residential address</label
+                >
+              </div>
+              <div class="address">
+                <p>4444 Elan Place , Annandale, VA, 22003</p>
+              </div>
+              <button type="submit">Save</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- bucky modal 3 code end-->
+
+    <!-- import bootstrap js file -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!--Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Owl Carousel js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>

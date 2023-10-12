@@ -1,0 +1,994 @@
+/* import font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --font-family: "Poppins", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: var(--font-family);
+  background: #f5f5f5;
+}
+ul {
+  list-style: none;
+  margin-bottom: 0px;
+  padding-left: 0;
+}
+a {
+  font-family: "Poppins", sans-serif;
+  text-decoration: none !important;
+  outline: none !important;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+a:hover,
+a:active,
+a:focus {
+  outline: none;
+  text-decoration: none;
+}
+p {
+  padding: 0;
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+/* ..............myBucky page css start.................. */
+
+/* bucky left style start */
+.buckyLeftWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+}
+.buckyTop {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 12px 0px;
+}
+.buckyTop img {
+  width: 21px;
+  height: 56px;
+}
+.buckyTop h2 {
+  margin-left: 5px;
+  font-size: 28px;
+  font-weight: 600;
+}
+.buckyDashboardMenu ul {
+  display: block;
+  margin-top: 5px;
+}
+.buckyDashboardMenu ul li {
+  margin-bottom: 8px;
+  background: #f5f5f5;
+  border-radius: 7px;
+  padding: 3px 10px;
+  cursor: pointer;
+}
+.buckyDashboardMenu ul li.active {
+  background: #b2fce4;
+}
+.buckyDashboardMenu ul li:hover {
+  background: #f0f0f0;
+}
+.buckyDashboardMenu ul li a {
+  font-size: 14px;
+  line-height: 22px;
+  font-family: var(--font-family);
+  color: black;
+  font-weight: 500;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .buckyDashboardMenu ul li a {
+    font-size: 13px;
+  }
+}
+.buckyDashboardMenu ul li a span {
+  vertical-align: 1px;
+}
+.buckyDashboardMenu ul li a i {
+  margin-right: 6px;
+  font-size: 15px;
+}
+.userLogout {
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+.userLogout a {
+  font-size: 14px;
+  line-height: 22px;
+  font-family: var(--font-family);
+  color: black;
+  font-weight: 600;
+  padding-left: 10px;
+}
+.userLogout a i {
+  margin-right: 6px;
+  font-size: 15px;
+}
+.userLogout a span:hover {
+  text-decoration: underline !important;
+}
+.userLogout a span {
+  vertical-align: 1px;
+}
+/* bucky right style start */
+.buckyTopRight {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 15px;
+}
+.profileWrap {
+  background: white;
+  border-radius: 11px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 233px;
+  padding: 6px 8px;
+}
+.profileName {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  background: #b2fce4;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+}
+.profileName span {
+  font-size: 12px;
+  font-weight: 400;
+}
+.profileInfo span {
+  font-size: 10px;
+  color: black;
+}
+.profileInfo button {
+  border: 0;
+  background: none;
+  outline: none;
+  margin-left: 2px;
+}
+.profileInfo button i {
+  font-size: 12px;
+}
+.profileInfo h5 {
+  font-size: 12px;
+  font-weight: 600;
+}
+.profileDetails {
+  margin-left: auto;
+}
+.profileDetails button {
+  outline: none;
+  border: 0;
+  background: none;
+}
+/* modal--1 code start */
+.closeButton {
+  border: 0;
+  background: none;
+  font-size: 20px;
+}
+.modalContent {
+  border-radius: 9px;
+}
+.modalHeader {
+  padding: 20px;
+}
+.modalBody {
+  padding: 20px;
+}
+.modalBody p {
+  font-size: 14px;
+  color: black;
+  margin-bottom: 18px;
+  line-height: 1.5rem;
+}
+
+.modalBody p a {
+  color: black;
+  font-weight: bold;
+  text-decoration: underline !important;
+}
+.modalBody h6 {
+  margin-bottom: 15px;
+  color: black;
+}
+.modalBody ul {
+  list-style-type: disc !important;
+  list-style-position: inside;
+  padding-left: 15px;
+  margin-bottom: 18px;
+}
+.modalBody ul li span {
+  font-size: 14px;
+}
+.modalBody button {
+  border: 0;
+  background: none;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 11px;
+  padding: 15px 12px;
+  background-color: #b2fce4;
+}
+/* modal--1 code end */
+/* modal--2 code start */
+@media (min-width: 500px) {
+  .modalSmall {
+    max-width: 233px;
+    display: block;
+  }
+}
+.modalPositionRight {
+  position: fixed;
+  top: 25px;
+  right: 15px;
+  margin: 0;
+  transform: translate(0, 0);
+}
+.moddalBody {
+  padding: 30px 0px;
+  padding-bottom: 25px;
+  width: 231px;
+}
+.idName {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  background: #b2fce4;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 18px;
+}
+.idName span {
+  font-size: 20px;
+  font-weight: 400;
+}
+.userProfileInformation h5 {
+  font-size: 19px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.userProfileInformation p {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+.dropDownListWrap ul li {
+  margin-bottom: 5px;
+  cursor: pointer;
+  padding: 5px 0px;
+}
+.dropDownListWrap ul li:hover {
+  background: #f0f0f0;
+}
+.dropDownListWrap ul li:last-child {
+  margin-bottom: 0px;
+}
+.dropDownListWrap ul li a {
+  padding-left: 15px;
+  font-size: 13px;
+  font-weight: bold;
+  color: black;
+}
+/* modal--2 code end */
+/* bucky purchase section style */
+.purchaseWrap {
+  padding: 24px 32px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  background: #b2fce4;
+  margin-top: 13px;
+}
+.purchaseWrap h2 {
+  font-size: 24px;
+  line-height: 2rem;
+  color: black;
+  font-weight: 600;
+  font-family: var(--font-family);
+  margin-bottom: 10px;
+}
+.purchaseWrap h1 {
+  font-size: 56px;
+  line-height: 4rem;
+  font-weight: 600;
+  font-family: var(--font-family);
+  margin-bottom: 6px;
+}
+.purchaseWrap p {
+  font-size: 14px;
+  line-height: 1.375rem;
+  font-family: var(--font-family);
+}
+@media (min-width: 992px) {
+  .col-md-3 {
+    width: 20%;
+  }
+  .col-md-9 {
+    width: 80%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .purchaseWrap {
+    padding: 20px 25px;
+  }
+  .purchaseWrap h2 {
+    font-size: 23px;
+    line-height: 2rem;
+  }
+  .purchaseWrap h1 {
+    font-size: 48px;
+    line-height: 3.2rem;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .purchaseWrap h2 {
+    font-size: 24px;
+    line-height: 2rem;
+  }
+  .purchaseWrap h1 {
+    font-size: 40px;
+    line-height: 3rem;
+  }
+  .purchaseWrap {
+    padding: 20px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .purchaseWrap h2 {
+    font-size: 23px;
+    line-height: 2rem;
+  }
+  .purchaseWrap h1 {
+    font-size: 40px;
+    line-height: 3rem;
+  }
+  .purchaseWrap {
+    padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .purchaseWrap {
+    padding: 20px;
+  }
+  .purchaseWrap h2 {
+    font-size: 20px;
+    line-height: 1.8rem;
+  }
+  .purchaseWrap h1 {
+    font-size: 40px;
+    line-height: 3rem;
+  }
+}
+/* shopProcessWrap style start */
+.shopProcessWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: white;
+  padding: 24px 32px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.stepOneLeft {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  background: #b2fce4;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  margin-bottom: 8px;
+}
+.stepThreeLeft,
+.stepTwoLeft {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  background: #000;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  margin-bottom: 8px;
+}
+.stepOneLeft span {
+  font-size: 17px;
+}
+.stepOneRight h5,
+.stepTwoMiddle h5 {
+  font-size: 19px;
+  line-height: 1.5rem;
+  margin-bottom: 3px;
+  font-weight: 600;
+}
+.stepOneRight p,
+.stepTwoMiddle p {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+.stepTwoRight button {
+  border: 0;
+  background-color: black;
+  color: #fff;
+  border-radius: 7px;
+  padding: 7px 10px;
+  font-size: 14px;
+}
+@media (max-width: 1024px) {
+  .shopProcessWrap {
+    flex-direction: column;
+  }
+  .step {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .stepTwoMiddle,
+  .stepOneRight {
+    margin-right: auto;
+  }
+  .step1,
+  .step2 {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+  .stepOneRight h5,
+  .stepTwoMiddle h5 {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .shopProcessWrap {
+    padding: 20px;
+  }
+  .stepOneLeft,
+  .stepTwoLeft,
+  .stepThreeLeft {
+    width: 26px;
+    height: 26px;
+  }
+  .stepOneLeft span,
+  .stepTwoLeft span,
+  .stepThreeLeft span {
+    font-size: 15px;
+  }
+  .stepTwoRight button {
+    line-height: 1.1rem;
+  }
+  .stepOneRight p,
+  .stepTwoMiddle p {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .step1,
+  .step2 {
+    margin-bottom: 18px;
+    padding-bottom: 18px;
+  }
+  .stepOneLeft,
+  .stepTwoLeft,
+  .stepThreeLeft {
+    padding: 5px;
+    text-align: center;
+    width: 26px;
+    height: 26px;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .stepOneLeft,
+  .stepTwoLeft,
+  .stepThreeLeft {
+    padding: 5px 8px;
+  }
+}
+/* bukcy app section */
+.buckyAppWrap {
+  padding: 24px 32px;
+  border-radius: 20px;
+  background: #fff;
+  margin-top: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.appInfo,
+.appImg {
+  width: 50%;
+}
+.appImg img {
+  display: block;
+  margin: 0 auto;
+}
+.appInfo h2 {
+  font-size: 24px;
+  line-height: 2rem;
+  color: black;
+  font-weight: 600;
+  font-family: var(--font-family);
+  margin-bottom: 10px;
+}
+.appInfo p {
+  font-size: 14px;
+  line-height: 1.5rem;
+  margin-bottom: 15px;
+}
+.appInfo a {
+  font-size: 16px;
+  line-height: 1.5rem;
+  color: #000;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .buckyAppWrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .appInfo,
+  .appImg {
+    width: 100%;
+  }
+  .appImg img {
+    margin-top: 10px;
+  }
+  .appInfo h2 {
+    margin-bottom: 8px;
+  }
+  .appInfo p {
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 767px) {
+  .buckyAppWrap {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  .appInfo,
+  .appImg {
+    width: 100%;
+  }
+  .appImg img {
+    margin-top: 10px;
+  }
+  .appImg img {
+    margin-top: 10px;
+  }
+  .appInfo h2 {
+    font-size: 22px;
+  }
+}
+@media (max-width: 480px) {
+  .buckyAppWrap {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  .appInfo h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+  .appInfo p {
+    margin-bottom: 12px;
+  }
+  .appInfo,
+  .appImg {
+    width: 100%;
+  }
+  .appImg img {
+    margin-top: 12px;
+  }
+}
+/* payment section style start*/
+.appInfo p a {
+  font-size: 14px;
+  text-decoration: underline !important;
+  font-weight: 500;
+}
+.appInfo p.paymentInfo {
+  font-size: 15px;
+}
+.appInfo a.learnMore {
+  font-size: 14px;
+  display: inline-block;
+  padding: 12px 24px;
+  background: black;
+  border-radius: 9px;
+  color: white;
+  margin-top: 5px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .appInfo a.learnMore {
+    padding: 8px 13px;
+    border-radius: 7px;
+  }
+}
+@media (max-width: 575px) {
+  .appInfo a.learnMore {
+    padding: 8px 13px;
+    border-radius: 7px;
+  }
+  .paymentImg {
+    margin-top: 5px;
+  }
+}
+@media (max-width: 480px) {
+  .appInfo a.learnMore {
+    padding: 8px 13px;
+    border-radius: 7px;
+  }
+  .appInfo p {
+    font-size: 13px;
+  }
+  .appInfo p.paymentInfo {
+    font-size: 14px;
+  }
+  .paymentImg {
+    margin-top: 5px;
+  }
+  .appInfo h2.paymentHeading {
+    line-height: 1.6rem;
+  }
+}
+/* Pament method modal code start */
+.paymentFromHeaderWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+.paymentHeading h4 {
+  font-size: 16px;
+}
+.paymentInputWrap {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px 0px;
+  margin-bottom: 18px;
+}
+.paymentInputWrap input {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+  padding: 12px 18px;
+  outline: none;
+  font-size: 15px;
+}
+.paymentInputWrap input.cvv {
+  border-bottom: 0;
+}
+.modalHeader h5 {
+  font-size: 19px;
+}
+.paymentInputWrap .formGroup label {
+  padding-left: 18px;
+  font-size: 12px;
+}
+.paymentInputWrap .formGroup input.name {
+  margin-top: -12px;
+  background: none;
+}
+.saveCardInfo {
+  font-size: 14px;
+  vertical-align: 3px;
+}
+input[type="checkbox"] {
+  width: 17px;
+  height: 17px;
+  margin-right: 3px;
+}
+.address p {
+  font-size: 15px;
+  color: #666;
+  margin-top: 20px;
+}
+@media only screen and (max-width: 575px) {
+  .modalHeader h5 {
+    font-size: 17px;
+  }
+  .paymentHeading h4 {
+    font-size: 15px;
+  }
+  .paymentMethodImg img {
+    width: 138px;
+    height: auto;
+  }
+  .paymentCheckbox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .saveCardInfo {
+    font-size: 13px;
+  }
+  .address p {
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+  input[type="checkbox"] {
+    margin-right: 5px;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .modalHeader h5 {
+    font-size: 16px;
+  }
+  .paymentHeading h4 {
+    font-size: 14px;
+  }
+  .paymentMethodImg img {
+    width: 115px;
+    height: auto;
+  }
+  .paymentCheckbox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .saveCardInfo {
+    font-size: 11px;
+  }
+  .address p {
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+}
+/* sliderWrapper style start */
+.sliderWrapper {
+  margin-top: 22px;
+  padding: 24px 32px;
+  border-radius: 20px;
+  background: #fff;
+}
+.sliderTopWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.sliderTopWrap h2 {
+  font-size: 24px;
+  line-height: 2rem;
+  color: black;
+  font-weight: 600;
+  font-family: var(--font-family);
+}
+.sliderTopWrap button {
+  border: 0;
+  background-color: black;
+  font-size: 14px;
+  border-radius: 7px;
+  padding: 8px 15px;
+  color: white;
+}
+.owl-carousel .item a img {
+  border-radius: 11px;
+  margin-bottom: 15px;
+  border: 1px solid rgb(0 0 0 / 0%);
+  transition: all 0.5s ease;
+}
+.owl-carousel .item a img:hover {
+  border: 1px solid #000;
+}
+.owl-carousel .item h4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+.owl-dots {
+  display: none;
+}
+.owl-nav {
+  display: none;
+}
+@media only screen and (max-width: 767px) {
+  .sliderWrapper {
+    padding: 20px;
+  }
+  .sliderTopWrap h2 {
+    font-size: 22px;
+    line-height: 1.6rem;
+  }
+  .sliderTopWrap button {
+    font-size: 13px;
+    border-radius: 7px;
+    padding: 8px 13px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .sliderWrapper {
+    padding: 20px;
+  }
+  .sliderTopWrap h2 {
+    font-size: 20px;
+    line-height: 1.6rem;
+  }
+  .sliderTopWrap button {
+    font-size: 13px;
+    border-radius: 7px;
+    padding: 7px 10px;
+  }
+}
+/* footer style start */
+footer .footerWrap {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.footerWrap p {
+  font-size: 13px;
+  margin-right: 15px;
+  padding-left: 5px;
+  line-height: 22px;
+}
+.footerWrap a {
+  font-size: 13px;
+  font-weight: 600;
+  color: black;
+  text-decoration: underline !important;
+}
+.footerWrap a.terms {
+  margin-right: 10px;
+}
+@media only screen and (max-width: 767px) {
+  footer .footerWrap {
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 480px) {
+  footer .footerWrap {
+    justify-content: center;
+  }
+  .footerWrap p {
+    font-size: 12px;
+  }
+  .footerWrap a {
+    font-size: 12px;
+  }
+}
+
+/* ........header style start............ */
+@media (min-width: 768px) {
+  .headerWrap {
+    display: none;
+  }
+  .mobileMenu {
+    display: none;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .buckyLeftWrap {
+    display: none;
+  }
+  .buckyTopRight {
+    display: none;
+  }
+  .headerWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px;
+  }
+  .barIconWrap button {
+    border: 0;
+    font-size: 22px;
+    background: none;
+    margin-left: 4px;
+  }
+  .barIconWrap button img {
+    width: 22px;
+  }
+  .headerLogoWrap img {
+    width: 18px;
+    height: 44px;
+  }
+  .headerProfileWrap {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    background: #b2fce4;
+    justify-content: center;
+    align-items: center;
+  }
+  .headerProfileWrap button {
+    background: none;
+    border: 0;
+    color: #000;
+    font-size: 15px;
+    font-weight: 400;
+  }
+  .mobileMenu {
+    display: none;
+    padding: 0px 15px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .headerWrap {
+    padding: 12px 15px;
+  }
+  .headerProfileWrap {
+    width: 35px;
+    height: 35px;
+  }
+  .headerProfileWrap button {
+    font-size: 13px;
+  }
+  .headerLogoWrap img {
+    width: 18px;
+    height: 40px;
+  }
+  .purchaseWrap {
+    margin-top: 12px;
+  }
+  .idName {
+    width: 45px;
+    height: 45px;
+  }
+  .idName span {
+    font-size: 16px;
+  }
+  .userProfileInformation p {
+    margin-bottom: 12px;
+  }
+}
+/* ........header style end............ */
+/* ..............myBucky page css end.................. */
